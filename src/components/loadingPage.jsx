@@ -2,7 +2,7 @@ import "../styles/index.css";
 import gsap from "gsap";
 
 import { useGSAP } from "@gsap/react";
-const LoadingPage = () => {
+const LoadingPage = ({ className }) => {
   useGSAP(() => {
     var tl = gsap.timeline();
     tl.from(".logo", { y: -1000, duration: 1.5, ease: "back.out" });
@@ -14,7 +14,7 @@ const LoadingPage = () => {
     tl.to(".screen", { opacity: 0, duration: 1 });
   });
   return (
-    <div className="relative overflow-hidden screen">
+    <div className={`relative overflow-hidden screen ${className}`}>
       <div className="bg-[#101010] w-full h-screen  flex justify-center items-center ">
         <img src="../../../public/img/logo.png" alt="logo" className="logo" />
       </div>
