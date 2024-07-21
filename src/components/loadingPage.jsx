@@ -5,7 +5,11 @@ import { useGSAP } from "@gsap/react";
 const LoadingPage = ({ className }) => {
   useGSAP(() => {
     var tl = gsap.timeline();
-    tl.from(".logo", { y: -1000, duration: 1.5, ease: "back.out" });
+    tl.fromTo(
+      ".logo",
+      { y: -1000, opacity: 0, duration: 1.5, ease: "back.out" },
+      { y: 0, opacity: 1, duration: 1.5 }
+    );
     tl.to(".logo", { y: 1000, duration: 1.5, ease: "back.in" }).delay(2);
 
     tl.to(".enter", { y: -905, duration: 1, ease: "power1.out" }).delay(4.5);
@@ -16,7 +20,11 @@ const LoadingPage = ({ className }) => {
   return (
     <div className={`relative overflow-hidden screen ${className}`}>
       <div className="bg-[#101010] w-full h-screen  flex justify-center items-center ">
-        <img src="../../../public/img/logo.png" alt="logo" className="logo" />
+        <img
+          src="../../../public/img/logo.png"
+          alt="logo"
+          className="logo opacity-0"
+        />
       </div>
       <div className="absolute bg-[#D2FC1C] w-full h-screen enter"></div>
     </div>
