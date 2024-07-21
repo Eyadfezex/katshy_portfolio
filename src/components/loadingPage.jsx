@@ -8,11 +8,11 @@ const LoadingPage = ({ className }) => {
     tl.fromTo(
       ".logo",
       { y: -500, opacity: 0, ease: "back.out" },
-      { y: 0, opacity: 1, duration: 1.5 }
+      { y: 0, opacity: 1, duration: 1 }
     );
-    tl.to(".logo", { y: 500, duration: 1.5, ease: "back.in" }).delay(2);
+    tl.to(".logo", { y: 500, duration: 1, ease: "back.in" }).delay(2);
 
-    tl.to(".enter", { y: -905, duration: 1, ease: "power1.out" }).delay(4.5);
+    tl.to(".enter", { y: -905, duration: 1, ease: "power1.out" }).delay(4);
     tl.to(".enter", { y: -2000, duration: 1, ease: "power1.out" }).delay(1);
     tl.to(".screen", { y: -2000, duration: 1, ease: "power1.in" });
     tl.to(".screen", { opacity: 0, duration: 1 });
