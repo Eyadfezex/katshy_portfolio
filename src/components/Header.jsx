@@ -1,6 +1,6 @@
 const Nav = () => {
   return (
-    <nav className="flex items-center px-[7rem] py-7 justify-end">
+    <nav className="flex items-center px-[7rem] w-full py-7 justify-end ">
       <div className="flex items-center text-white gap-4">
         <svg
           width="2"
@@ -25,7 +25,7 @@ const Nav = () => {
           </defs>
         </svg>
 
-        <p className="uppercase text-[14px]">Menu</p>
+        <p className="uppercase text-[14px] font-poppins">Menu</p>
         <div>
           <span className="bg-white w-[20px] h-[3px] block"></span>
           <span className="bg-white w-[15px] h-[3px] block mt-1"></span>

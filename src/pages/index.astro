@@ -1,8 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LoadingPage from '../components/loadingPage';
+import Nav from '../components/Header';
+import '../styles/index.css'
 ---
-<LoadingPage client:visible className="z-10"/>
 <Layout title='Katshy'>
-    
+    <LoadingPage client:load className="z-10 "/>
+    <main class="absolute top-0 w-full">
+        <Nav/>
+
+        <div class="font-poppins text-white relative ">
+            <div>
+                <p>brand.design.Web.
+                    in-house development.
+                    &more</p>
+            </div>
+            </div>
+    </main>
 </Layout>
