@@ -1,7 +1,6 @@
 import "../styles/index.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import loadingK from "../../public/img/loadingK.png";
 const Lamp = () => {
   useGSAP(() => {
     var tl = gsap.timeline({ repeat: "-1" });
@@ -17,7 +16,11 @@ const Lamp = () => {
 
   return (
     <div className="absolute top-[4rem] left-[5rem] ">
-      <img src={loadingK} alt="lagging" className="w-[40%] lamp" />
+      <img
+        src="/public/img/loadingK.png"
+        alt="lagging"
+        className="w-[40%] lamp"
+      />
     </div>
   );
 };

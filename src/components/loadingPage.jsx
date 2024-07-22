@@ -1,6 +1,5 @@
 import "../styles/index.css";
 import gsap from "gsap";
-import logo from "../../public/img/logo.png";
 import { useGSAP } from "@gsap/react";
 const LoadingPage = ({ className }) => {
   useGSAP(() => {
@@ -22,7 +21,11 @@ const LoadingPage = ({ className }) => {
     <div className="fixed z-10 w-full">
       <div className={`relative overflow-hidden screen ${className}`}>
         <div className="bg-main w-full h-screen  flex justify-center items-center ">
-          <img src={logo} alt="logo" className="logo opacity-0" />
+          <img
+            src="/public/img/logo.png"
+            alt="logo"
+            className="logo opacity-0"
+          />
         </div>
         <div className="absolute bg-second w-full h-screen enter"></div>
       </div>
