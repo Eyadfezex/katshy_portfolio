@@ -16,10 +16,10 @@ const LoadingPage = ({ className }) => {
     tl.to(".enter", { y: -2000, duration: 1, ease: "power1.out" }).delay(1);
     tl.to(".screen", { y: -2000, duration: 1, ease: "power1.in" });
     tl.to(".screen", { opacity: 0 });
-    tl.to(".screen", { width: 0 });
+    tl.to(".loading", { width: 0 });
   });
   return (
-    <div className="fixed z-10 w-full">
+    <div className="fixed z-10 w-full loading">
       <div className={`relative overflow-hidden screen ${className}`}>
         <div className="bg-main w-full h-screen  flex justify-center items-center ">
           <img src={logo.src} alt="logo" className="logo opacity-0" />
