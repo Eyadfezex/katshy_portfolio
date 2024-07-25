@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LoadingPage from '../components/loadingPage';
-import Nav from '../components/Header';
 import Strp from '../components/Strap';
 import Lamp from '../components/lamp'
 import Slogan from"../components/slogan"
@@ -9,11 +8,12 @@ import '../styles/index.css'
 ---
 
 <Layout title='Katshy'>
-    <LoadingPage client:load className="z-10 "/>
-    <main class="relative top-0 w-full" >
-        <Nav/>
-            <Slogan client:load/>
-            <Lamp client:visible />
+    
+    
+    <!-- <LoadingPage client:load className="z-10"/> -->
+    <main class="relative top-0 w-full pt-[7rem]" >
+            <Slogan client:only/>
+            <Lamp client:only />
         <Strp className={`absolute rotate-45 left-[-10rem] bg-[#D2FC1C]`}/>
         <Strp className={`absolute rotate-[-10deg] left-[-5rem] bg-[#212121] text-[#D2FC1C]`} />
     </main>
