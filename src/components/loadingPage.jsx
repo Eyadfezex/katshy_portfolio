@@ -19,9 +19,9 @@ const LoadingPage = ({ className }) => {
     tl.to(".loading", { width: 0 });
   });
   return (
-    <div className="fixed z-10 w-full loading">
-      <div className={`relative overflow-hidden screen ${className}`}>
-        <div className="bg-main w-full h-screen  flex justify-center items-center ">
+    <div className="fixed z-10 w-full loading h-full">
+      <div className={`relative overflow-hidden screen h-full ${className}`}>
+        <div className="bg-main w-full h-full  flex justify-center items-center ">
           <img src={logo.src} alt="logo" className="logo opacity-0" />
         </div>
         <div className="absolute bg-second w-full h-screen enter"></div>
