@@ -14,7 +14,7 @@ const Nav = () => {
     if (!menuTimeline.current) {
       menuTimeline.current = gsap
         .timeline({ paused: true })
-        .to(".menu", { x: -400, duration: 0.5 });
+        .to(".menu", { x: -400, duration: 0.5, opacity: 1 });
     }
     toggle ? menuTimeline.current.play() : menuTimeline.current.reverse();
   }, [toggle]);
@@ -54,7 +54,7 @@ const Nav = () => {
           <span className="bg-white w-[15px] h-[3px] block mt-1 group-hover:w-[20px] duration-[0.3s]"></span>
         </div>
       </div>
-      <DropMenu className="absolute top-[80%] right-[-20%] menu" />
+      <DropMenu className="absolute top-[80%] right-[-20%] menu opacity-0" />
     </nav>
   );
 };
