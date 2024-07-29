@@ -2,7 +2,7 @@ import "../styles/index.css";
 
 const Strp = ({ className }) => {
   return (
-    <div className={`w-[200%] px-10 py-4 ${className}`}>
+    <div className={`w-[200%] px-10 py-4 overflow-hidden ${className}`}>
       <div
         className={`flex items-center strap gap-10 md:text-[15px] lg:text-[32px] `}
       >
