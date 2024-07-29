@@ -16,7 +16,7 @@ const Lamp = () => {
   });
 
   return (
-    <div className="absolute top-[4rem] left-[5rem] ">
+    <div className="absolute lg:top-[12rem] xl:top-[10rem]  xl:top-[7rem] xl:left-[5rem] xl:left-[2rem] ">
       <img src={loadingK.src} alt="lagging" className="w-[40%] lamp" />
     </div>
   );
