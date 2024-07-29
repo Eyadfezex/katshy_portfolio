@@ -8,7 +8,7 @@ const LoadingPage = ({ className }) => {
     tl.fromTo(
       ".logo",
       { y: -500, opacity: 0, ease: "back.out" },
-      { y: 0, opacity: 1, duration: 1 }
+      { y: 0, opacity: 1, duration: 1 },
     );
     tl.to(".logo", { y: 500, duration: 1, ease: "back.in" }).delay(2);
 
