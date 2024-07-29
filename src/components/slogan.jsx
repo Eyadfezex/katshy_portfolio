@@ -6,7 +6,7 @@ const Slogan = () => {
     gsap.from(".text", { duration: 2, x: -1000, delay: 5.5, ease: "back.out" });
   });
   return (
-    <div className="font-poppins text-white relative lg:top-[10rem] xl:top-[10rem] lg:left-[5rem] xl:left-[11rem] xl:left-[8rem] z-[5] lg:text-[70px]  xl:text-[90px] font-poppins capitalize ">
+    <div className="font-poppins text-white relative lg:top-[10rem] xl:top-[7rem] lg:left-[5rem] xl:left-[10rem]  z-[5] lg:text-[70px]  xl:text-[90px] font-poppins capitalize ">
       <p className="text">
         <span className="text-second">brand.</span>
         design<span className="text-second">.</span>
