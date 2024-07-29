@@ -1,4 +1,4 @@
-const DropMenu = ({ className, toggle }) => {
+const DropMenu = ({ className }) => {
   const pathname = window.location.pathname;
   const currentPath = pathname.slice(1); // remove the first "/"
 

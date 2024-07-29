@@ -14,7 +14,7 @@ const Nav = () => {
     if (!menuTimeline.current) {
       menuTimeline.current = gsap
         .timeline({ paused: true })
-        .to(".menu", { x: -400, duration: 0.5, opacity: 1 });
+        .to(".menu", { x: "-25vw", duration: 0.5, opacity: 1 });
     }
     toggle ? menuTimeline.current.play() : menuTimeline.current.reverse();
   }, [toggle]);
