@@ -12,9 +12,11 @@ import "../styles/index.css";
   <main class="relative top-0 w-full pt-[7rem] overflow-hidden h-screen">
     <Slogan client:only />
     <Lamp client:only />
-    <Strp className={`absolute rotate-45 xl:left-[-10rem] bg-[#D2FC1C] `} />
     <Strp
-      className={`absolute rotate-[-10deg] lg:top-[75%] xl:top-[65%] lg:left-[-6rem] xl:left-[-5rem] bg-[#212121] text-[#D2FC1C]`}
+      className={`absolute rotate-45 md:top-[30%]  xl:left-[-10rem] bg-[#D2FC1C] md:left-[-5rem] `}
+    />
+    <Strp
+      className={`absolute rotate-[-10deg] md:top-[70%] lg:top-[75%] xl:top-[65%] md:left-[-7rem] lg:left-[-6rem] xl:left-[-5rem] bg-[#212121] text-[#D2FC1C]`}
     />
   </main>
 </Layout>
