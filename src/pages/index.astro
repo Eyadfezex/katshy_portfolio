@@ -11,7 +11,8 @@ import "../styles/index.css";
   <LoadingPage client:load className="z-10" />
   <main class="relative top-0 w-full pt-[7rem] overflow-hidden h-screen">
     <Slogan client:only />
-    <Lamp client:only />
+    <Lamp client:only transition:name="lamp" />
+    <Strp className={`absolute rotate-45 left-[-10rem] bg-[#D2FC1C]`} />
     <Strp
       className={`absolute rotate-45 md:top-[30%]  xl:left-[-10rem] bg-[#D2FC1C] md:left-[-5rem] `}
     />
