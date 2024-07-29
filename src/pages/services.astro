@@ -2,12 +2,20 @@
 import ServicesCards from "../components/servicesCards";
 import Layout from "../layouts/Layout.astro";
 import PageLabel from "../components/pageLabel";
+import Image from "astro/components/Image.astro";
+import sletter from "../../public/img/2.png";
 ---
 
 <Layout title="services">
-  <main class="relative top-[4rem] left-[30rem]">
-    <PageLabel label={"services"} className={"left-[-20rem]  top-[6rem]"} />
-    <div class="flex flex-wrap gap-[22px] w-[70%]" transition:animate="slide">
+  <Image
+    src={sletter}
+    alt={"S"}
+    class={"absolute w-[25%] left-0 top-[35%]"}
+    transition:name="lamp"
+  />
+  <main class="relative top-[4rem] left-[22rem]">
+    <PageLabel label={"services"} className={"left-[-17rem]  top-[6rem]"} />
+    <div class="flex flex-wrap gap-[22px] w-[80%]" transition:animate="slide">
       <ServicesCards
         title={"Graphic Design."}
         content="Through custom graphics, at Katshy, your ideas as become tangible. We have gifted designers to develop a logo, business cards, fold ups, and Facebook covers for your brand. So why not let us help you make an impression that will last for years."
