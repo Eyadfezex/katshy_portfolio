@@ -8,15 +8,15 @@ import "../styles/index.css";
 ---
 
 <Layout title="Katshy">
-  <LoadingPage client:load className="z-10" />
+  <!-- <LoadingPage client:load className="z-10" /> -->
   <main class="relative top-0 w-full pt-[7rem] overflow-hidden h-screen">
     <Slogan client:only />
     <Lamp client:only transition:name="lamp" />
     <Strp
-      className={`absolute rotate-45 md:top-[30%]  xl:left-[-10rem] bg-[#D2FC1C] md:left-[-5rem] `}
+      className={`absolute rotate-45 top-[25%] left-[-10%] md:top-[30%]  xl:left-[-10rem] bg-[#D2FC1C] md:left-[-5rem] `}
     />
     <Strp
-      className={`absolute rotate-[-10deg] md:top-[70%] lg:top-[75%] xl:top-[65%] md:left-[-7rem] lg:left-[-6rem] xl:left-[-5rem] bg-[#212121] text-[#D2FC1C]`}
+      className={`absolute rotate-[-10deg] top-[80%] lg:top-[75%] xl:top-[65%] left-[-7rem] lg:left-[-6rem] xl:left-[-5rem] bg-[#212121] text-[#D2FC1C]`}
     />
   </main>
 </Layout>
