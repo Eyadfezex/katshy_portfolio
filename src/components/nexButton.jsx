@@ -1,8 +1,13 @@
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 const NexButton = ({ className, link }) => {
+  useGSAP(() => {
+    gsap.from(".button", { y: 150, delay: 7, duration: 1, ease: "back.out" });
+  });
   return (
     <a
       href={link}
-      className={`${className} bg-second py-2 px-8 rounded-lg [box-shadow:0px_5px_17px_1px_rgba(210,252,28,0.75)]`}
+      className={`${className} button bg-second py-2 px-8 rounded-lg [box-shadow:0px_5px_17px_1px_rgba(210,252,28,0.75)]`}
     >
       <div className="flex items-center gap-[22px]">
         <p className="text-[32px] uppercase tracking-[0.5rem] ">Next</p>
