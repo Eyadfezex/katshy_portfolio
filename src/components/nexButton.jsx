@@ -2,7 +2,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 const NexButton = ({ className, link }) => {
   useGSAP(() => {
-    gsap.from(".button", { y: 200, delay: 7, duration: 1, ease: "back.out" });
+    gsap.from(".button", { y: 300, delay: 7, duration: 1, ease: "back.out" });
   });
   return (
     <a
