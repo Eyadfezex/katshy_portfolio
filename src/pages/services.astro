@@ -1,23 +1,25 @@
 ---
 import ServicesCards from "../components/servicesCards";
-import Layout from "../layouts/Layout.astro";
+import OLayout from "../layouts/OLayout.astro";
 import PageLabel from "../components/pageLabel";
 import Image from "astro/components/Image.astro";
 import sletter from "../../public/img/s.png";
 import NexButton from "../components/nexButton";
 ---
 
-<Layout title="services">
-  <main class="relative top-[4rem] left-[22rem]">
-    <Image
-      src={sletter}
-      alt={"S"}
-      class={"absolute w-[25rem] left-[-23rem] top-[35%]"}
-      transition:name="lamp"
-    />
-    <PageLabel label={"services"} className={"left-[-17rem]  top-[6rem]"} />
+<OLayout title="services">
+  <Image
+    src={sletter}
+    alt={"S"}
+    class={"absolute w-[25rem] top-[35%] hidden lg:block"}
+    transition:name="lamp"
+  />
+  <PageLabel label={"services"} className={"top-[10rem] left-[4rem]"} />
+  <main
+    class="relative top-[15rem] left-[4rem] lg:top-[4rem] lg:left-[22rem] w-full"
+  >
     <div
-      class="flex flex-wrap gap-[22px] lg:w-[100%] xl:w-[80%]"
+      class="flex flex-col lg:flex-row pb-5 lg:flex-wrap gap-[22px] lg:w-[100%] xl:w-[80%]"
       transition:animate="slide"
     >
       <ServicesCards
@@ -51,11 +53,11 @@ import NexButton from "../components/nexButton";
         link={"."}
       />
     </div>
-    <NexButton
-      link={"/portfolio"}
-      className={"absolute left-[-17rem] bottom-0"}
-      client:load
-    />
   </main>
-</Layout>
+  <NexButton
+    link={"/portfolio"}
+    className={"absolute left-14 bottom-16 hidden xl:block"}
+    client:visible
+  />
+</OLayout>
 <style></style>
