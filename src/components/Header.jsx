@@ -20,7 +20,7 @@ const Nav = () => {
   }, [toggle]);
 
   return (
-    <nav className="flex items-center px-[7rem] w-full py-7 justify-end fixed z-10">
+    <nav className="flex items-center px-[7rem] w-full py-7 justify-end fixed z-[1] backdrop-blur-sm	">
       <div
         className="flex items-center text-white gap-4 group cursor-pointer"
         onClick={handleMenuClick}

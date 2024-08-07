@@ -1,22 +1,39 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import IndexLay from "../layouts/IndexLay.astro";
 import LoadingPage from "../components/loadingPage";
 import Strp from "../components/Strap";
+import PageLabel from "../components/pageLabel";
 import Lamp from "../components/lamp";
 import Slogan from "../components/slogan";
 import "../styles/index.css";
 ---
 
-<Layout title="Katshy">
-  <!-- <LoadingPage client:load className="z-10" /> -->
-  <main class="relative top-0 w-full pt-[7rem] overflow-x-hidden h-screen">
+<LoadingPage client:load className="" />
+<IndexLay title="Katshy">
+  <section class="overflow-hidden relative" id="hero">
     <Slogan client:only />
-    <Lamp client:only />
+    <Lamp className="top-[-20rem] w-[40%]" client:only />
     <Strp
-      className={`absolute rotate-45 md:top-[30%]  xl:left-[-10rem] bg-[#D2FC1C] md:left-[-5rem] `}
+      className={`relative rotate-45 md:top-[-45rem]  xl:left-[-20rem] bg-[#D2FC1C] md:left-[-5rem] `}
     />
     <Strp
-      className={`absolute rotate-[-10deg] md:top-[70%] lg:top-[75%] xl:top-[65%] md:left-[-7rem] lg:left-[-6rem] xl:left-[-5rem] bg-[#212121] text-[#D2FC1C]`}
+      className={`relative rotate-[-10deg] md:top-[50%] lg:top-[75%] xl:top-[-35rem] md:left-[-7rem] lg:left-[-6rem] xl:left-[-5rem] bg-[#212121] text-[#D2FC1C]`}
     />
-  </main>
-</Layout>
+  </section>
+  <section class="flex items-center justify-center">
+    <div class="flex flex-col items-center">
+      <PageLabel label="about us" className="" />
+      <Lamp className="mb-[5rem]" />
+    </div>
+    <div class="top-[85%] left-[38%] uppercase text-white">
+      <p class="text-[40px] leading-[76px]">
+        we are a digital mar<span class="text-second">k</span>eting agency.
+      </p>
+      <p class="mt-[40px] leading-[60px] text-[32px]">
+        <span class="text-second">k</span>atshy is a leading design & software
+        development agency. We help startups and companies to advance, spread
+        and improve quality
+      </p>
+    </div>
+  </section>
+</IndexLay>

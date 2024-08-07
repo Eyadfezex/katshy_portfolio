@@ -13,11 +13,25 @@ const LoadingPage = ({ className }) => {
     tl.to(".logo", { y: 500, duration: 1, ease: "back.in" }).delay(2);
 
     tl.to(".enter", { y: -905, duration: 1, ease: "power1.out" }).delay(4);
-    tl.to(".enter", { y: -2000, duration: 1, ease: "power1.out" }).delay(1);
-    tl.to(".screen", { y: -2000, duration: 1, ease: "power1.in" });
+    tl.to(".enter", {
+      y: -2000,
+      duration: 1,
+      ease: "power1.out",
+      onComplete: () => {
+        document.getElementById("hero").scrollIntoView({
+          behavior: "smooth",
+        });
+      },
+    }).delay(1);
+    tl.to(".screen", {
+      y: -2000,
+      duration: 1,
+      ease: "power1.in",
+    });
     tl.to(".screen", { opacity: 0 });
     tl.to(".loading", { width: 0 });
   });
+
   return (
     <div className="fixed z-10 w-full loading h-full">
       <div className={`relative overflow-hidden screen h-full ${className}`}>

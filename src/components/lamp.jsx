@@ -2,7 +2,7 @@ import "../styles/index.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import loadingK from "../../public/img/loadingK.png";
-const Lamp = () => {
+const Lamp = ({ className }) => {
   useGSAP(() => {
     var tl = gsap.timeline({ repeat: "-1" });
     tl.to(".lamp", { duration: 0.1, opacity: 0.5 });
@@ -16,8 +16,8 @@ const Lamp = () => {
   });
 
   return (
-    <div className="absolute lg:top-[12rem] xl:top-[7rem] xl:left-[2rem] lg:block hidden ">
-      <img src={loadingK.src} alt="lagging" className="w-[40%] lamp" />
+    <div className={`relative lg:block hidden ${className}  lamp`}>
+      <img src={loadingK.src} alt="lagging" />
     </div>
   );
 };
