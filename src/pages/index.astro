@@ -17,26 +17,32 @@ import "../styles/index.css";
 
 <LoadingPage client:load className="" />
 <Layout title="Katshy">
-  <section class="overflow-hidden relative h-screen" id="hero">
+  <section class="overflow-hidden relative h-screen w-full" id="hero">
     <Slogan client:only />
-    <Lamp className="lg:top-[-11rem] xl:top-[-20rem] w-[40%]" client:only />
-    <Strp
-      className="relative rotate-45 md:top-[-45rem] lg:top-[-25rem]  xl:left-[-5rem] bg-[#D2FC1C] md:left-[-5rem]"
+    <Lamp
+      className="md:top-[-15rem] lg:top-[-11rem] xl:top-[-20rem] w-[40%]"
+      client:only
     />
     <Strp
-      className={`relative rotate-[-10deg] md:top-[50%] lg:top-[-32%] xl:top-[-40rem] md:left-[-7rem] lg:left-[-6rem] xl:left-[-5rem] bg-[#212121] text-[#D2FC1C]`}
+      className="relative rotate-45 top-[-10rem]  md:top-[-15rem] lg:top-[-25rem] left-[-3rem]  bg-[#D2FC1C] md:left-[-5rem]"
+    />
+    <Strp
+      className={`relative rotate-[-10deg] top-[30%] md:top-[15%] lg:top-[-32%] xl:top-[-40rem] left-[-5rem] md:left-[-7rem] lg:left-[-6rem] xl:left-[-5rem] bg-[#212121] text-[#D2FC1C]`}
     />
   </section>
-  <section class="flex items-center justify-center">
+
+  <section
+    class="flex lg:items-center justify-center flex-col lg:justify-normal lg:flex-row items-start px-[20px]"
+  >
     <div class="flex flex-col items-center">
-      <PageLabel label="about us" className="mb-[-8rem]" />
-      <Lamp className="mb-[5rem]" />
+      <PageLabel label="about us" className="" />
+      <Lamp className="mb-[5rem] hidden lg:block" />
     </div>
-    <div class="top-[85%] left-[38%] uppercase text-white ml-[-4rem]">
-      <p class="text-[40px] leading-[76px]">
+    <div class="uppercase text-white lg:ml-[-4rem]">
+      <p class="text-[32px] lg:text-[40px] leading-[76px]">
         we are a digital mar<span class="text-second">k</span>eting agency.
       </p>
-      <p class="mt-[40px] leading-[60px] text-[32px]">
+      <p class="mt-[40px] leading-[60px] text-[22px] lg:text-[32px]">
         <span class="text-second">k</span>atshy is a leading design & software
         development agency. We help startups and companies to advance, spread
         and improve quality
@@ -44,9 +50,9 @@ import "../styles/index.css";
     </div>
   </section>
 
-  <section>
-    <div class="flex items-center">
-      <div class="flex flex-col items-center gap-[5rem]">
+  <section class="px-[20px]">
+    <div class="flex flex-col gap-[4rem] lg:gap-0 lg:items-center lg:flex-row">
+      <div class="flex flex-col lg:items-center gap-[5rem]">
         <PageLabel label={"services"} className={""} />
         <Image
           src={sletter}
@@ -94,33 +100,58 @@ import "../styles/index.css";
   </section>
 
   <section class="text-white">
-    <PageLabel label="contacts us" className="top-[8rem] left-[13rem]" />
-    <div class="relative top-[13rem] left-[10rem] flex items-center">
-      <Image src={cletter} alt="C" width="400" />
-      <div
-        class="flex items-center gap-[5rem] relative left-[-8rem] top-[-0.5rem]"
-      >
-        <a href=".">
-          <div class="flex items-center gap-[1rem]"><p>01068389335</p></div>
-        </a>
-        <a href=".">
-          <div class="flex items-center gap-[0.5rem]">
-            <Image src={facebook} alt={"facebook"} width="100" />
-            <p><span class="text-second">K</span>atshy</p>
+    <div class="flex justify-center">
+      <div class="flex flex-col justify-center">
+        <PageLabel label="contacts us" className="left-[3rem]" />
+        <div class="flex relative">
+          <Image src={cletter} alt="C" width="400" />
+          <div
+            class="absolute lg:relative flex items-center left-[37%] top-[5%] lg:top-0 lg:left-[-5rem] bottom-[2rem]"
+          >
+            <div
+              class="flex items-center flex-col lg:flex-row gap-[1rem] lg:gap-[5rem] relative"
+            >
+              <a href=".">
+                <div class="flex items-center gap-[1rem]">
+                  <p>01068389335</p>
+                </div>
+              </a>
+              <a href=".">
+                <div class="flex items-center gap-[0.5rem]">
+                  <Image
+                    src={facebook}
+                    alt={"facebook"}
+                    width="100"
+                    class="hidden lg:block"
+                  />
+                  <p><span class="text-second">K</span>atshy</p>
+                </div>
+              </a>
+              <a href=".">
+                <div class="flex items-center gap-[0.5rem]">
+                  <Image
+                    src={ins}
+                    alt={"instegram"}
+                    width="100"
+                    class="opacity-40 hidden lg:block"
+                  />
+                  <p><span class="text-second">K</span>atshy</p>
+                </div>
+              </a>
+              <a href=".">
+                <div class="flex items-center gap-[0.5rem]">
+                  <Image
+                    src={behance}
+                    alt={"behance"}
+                    width="100"
+                    class="hidden lg:block"
+                  />
+                  <p><span class="text-second">K</span>atshy</p>
+                </div>
+              </a>
+            </div>
           </div>
-        </a>
-        <a href=".">
-          <div class="flex items-center gap-[0.5rem]">
-            <Image src={ins} alt={"instegram"} width="100" class="opacity-40" />
-            <p><span class="text-second">K</span>atshy</p>
-          </div>
-        </a>
-        <a href=".">
-          <div class="flex items-center gap-[0.5rem]">
-            <Image src={behance} alt={"behance"} width="100" />
-            <p><span class="text-second">K</span>atshy</p>
-          </div>
-        </a>
+        </div>
       </div>
     </div>
   </section>

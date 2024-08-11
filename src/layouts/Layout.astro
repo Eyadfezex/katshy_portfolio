@@ -18,12 +18,11 @@ const { title } = Astro.props;
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body
-    id="page"
-    class="overflow-x-hidden relative bg-main h-full duration-[0.3s]"
-  >
+  <body id="page" class="relative bg-main h-full duration-[0.3s]">
     <Nav client:only />
-    <main class="flex flex-col gap-[10rem] pb-[25rem]">
+    <main
+      class="flex flex-col gap-[10rem] pb-[5rem] md:pb-[15rem] w-full overflow-x-hidden"
+    >
       <slot />
     </main>
   </body>
