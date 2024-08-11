@@ -2,9 +2,9 @@ import "../styles/index.css";
 
 const Strp = ({ className }) => {
   return (
-    <div className={`w-[200%] px-10 py-4  xl:py-7 ${className}`}>
+    <div className={`w-[200%] px-10 py-4 overflow-hidden ${className}`}>
       <div
-        className={`flex items-center strap gap-10 text-xs md:text-[15px] lg:text-[32px] `}
+        className={`flex items-center strap gap-10 md:text-[15px] lg:text-[32px] `}
       >
         <div className="flex items-center justify-center shrink-0	 font-roboto font-[400] gap-10  ">
           <p className="uppercase">creative design</p>
