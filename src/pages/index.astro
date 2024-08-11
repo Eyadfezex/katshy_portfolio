@@ -1,31 +1,38 @@
 ---
-import IndexLay from "../layouts/IndexLay.astro";
+import Layout from "../layouts/Layout.astro";
 import LoadingPage from "../components/loadingPage";
+import facebook from "../../public/img/face.png";
 import Strp from "../components/Strap";
+import ins from "../../public/img/ins.png";
+import behance from "../../public/img/be.png";
+import cletter from "../../public/img/c.png";
+import Image from "astro/components/Image.astro";
+import sletter from "../../public/img/s.png";
 import PageLabel from "../components/pageLabel";
+import ServicesCards from "../components/ServicesCards";
 import Lamp from "../components/lamp";
 import Slogan from "../components/slogan";
 import "../styles/index.css";
 ---
 
 <LoadingPage client:load className="" />
-<IndexLay title="Katshy">
-  <section class="overflow-hidden relative" id="hero">
+<Layout title="Katshy">
+  <section class="overflow-hidden relative h-screen" id="hero">
     <Slogan client:only />
-    <Lamp className="top-[-20rem] w-[40%]" client:only />
+    <Lamp className="lg:top-[-11rem] xl:top-[-20rem] w-[40%]" client:only />
     <Strp
-      className={`relative rotate-45 md:top-[-45rem]  xl:left-[-20rem] bg-[#D2FC1C] md:left-[-5rem] `}
+      className="relative rotate-45 md:top-[-45rem] lg:top-[-25rem]  xl:left-[-5rem] bg-[#D2FC1C] md:left-[-5rem]"
     />
     <Strp
-      className={`relative rotate-[-10deg] md:top-[50%] lg:top-[75%] xl:top-[-35rem] md:left-[-7rem] lg:left-[-6rem] xl:left-[-5rem] bg-[#212121] text-[#D2FC1C]`}
+      className={`relative rotate-[-10deg] md:top-[50%] lg:top-[-32%] xl:top-[-40rem] md:left-[-7rem] lg:left-[-6rem] xl:left-[-5rem] bg-[#212121] text-[#D2FC1C]`}
     />
   </section>
   <section class="flex items-center justify-center">
     <div class="flex flex-col items-center">
-      <PageLabel label="about us" className="" />
+      <PageLabel label="about us" className="mb-[-8rem]" />
       <Lamp className="mb-[5rem]" />
     </div>
-    <div class="top-[85%] left-[38%] uppercase text-white">
+    <div class="top-[85%] left-[38%] uppercase text-white ml-[-4rem]">
       <p class="text-[40px] leading-[76px]">
         we are a digital mar<span class="text-second">k</span>eting agency.
       </p>
@@ -36,4 +43,85 @@ import "../styles/index.css";
       </p>
     </div>
   </section>
-</IndexLay>
+
+  <section>
+    <div class="flex items-center">
+      <div class="flex flex-col items-center gap-[5rem]">
+        <PageLabel label={"services"} className={""} />
+        <Image
+          src={sletter}
+          alt={"S"}
+          class={" w-[25rem] top-[35%] hidden lg:block"}
+          transition:name="lamp"
+        />
+      </div>
+      <div
+        class="flex flex-col lg:flex-row pb-5 lg:flex-wrap gap-[22px] lg:w-[100%] xl:w-[80%]"
+        transition:animate="slide"
+      >
+        <ServicesCards
+          title={"Graphic Design."}
+          content="Through custom graphics, at Katshy, your ideas as become tangible. We have gifted designers to develop a logo, business cards, fold ups, and Facebook covers for your brand. So why not let us help you make an impression that will last for years."
+          link={"."}
+        />
+        <ServicesCards
+          title={"Social media Marketing."}
+          content="at Katshy we elevate your brand to the next level on social media. We have experts who are developing strategies to target the right market and advertise the internet platforms. Our team is ready to help you get closer to your customers and set your business apart."
+          link={"."}
+        />
+        <ServicesCards
+          title={"Web service."}
+          content="At Katshy, we bring your vision to the web. Our expert team designs and develops custom websites that are visually stunning and user-friendly. Let us help you establish a powerful online presence."
+          link={"."}
+        />
+        <ServicesCards
+          title={"Video Editing."}
+          content="we enhance your footage with expert video editing. Our skilled team refines and transforms your videos into polished, engaging content that captures your audience's attention. Let us help you create stunning visual stories."
+          link={"."}
+        />
+        <ServicesCards
+          title={"media production."}
+          content="we bring your stories to life. Our expert team creates high-quality videos, animations, and audio content tailored to your brand. Let us help you captivate your audience with professional media production."
+          link={"."}
+        />
+        <ServicesCards
+          title={"App service."}
+          content="At Katshy, we turn your ideas into powerful apps. Our skilled team designs and develops custom mobile applications that are intuitive and engaging. Let us help you create an impactful app experience."
+          link={"."}
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="text-white">
+    <PageLabel label="contacts us" className="top-[8rem] left-[13rem]" />
+    <div class="relative top-[13rem] left-[10rem] flex items-center">
+      <Image src={cletter} alt="C" width="400" />
+      <div
+        class="flex items-center gap-[5rem] relative left-[-8rem] top-[-0.5rem]"
+      >
+        <a href=".">
+          <div class="flex items-center gap-[1rem]"><p>01068389335</p></div>
+        </a>
+        <a href=".">
+          <div class="flex items-center gap-[0.5rem]">
+            <Image src={facebook} alt={"facebook"} width="100" />
+            <p><span class="text-second">K</span>atshy</p>
+          </div>
+        </a>
+        <a href=".">
+          <div class="flex items-center gap-[0.5rem]">
+            <Image src={ins} alt={"instegram"} width="100" class="opacity-40" />
+            <p><span class="text-second">K</span>atshy</p>
+          </div>
+        </a>
+        <a href=".">
+          <div class="flex items-center gap-[0.5rem]">
+            <Image src={behance} alt={"behance"} width="100" />
+            <p><span class="text-second">K</span>atshy</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
