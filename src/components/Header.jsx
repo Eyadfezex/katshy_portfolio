@@ -54,7 +54,7 @@ const Nav = () => {
           <span className="bg-white w-[15px] h-[3px] block mt-1 group-hover:w-[20px] duration-[0.3s]"></span>
         </div>
       </div>
-      <DropMenu className="absolute top-[80%] right-[-20%] menu opacity-0" />
+      <DropMenu className="absolute top-[80%] right-[-20%] menu opacity-0  z-50" />
     </nav>
   );
 };

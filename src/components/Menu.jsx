@@ -5,9 +5,9 @@ const DropMenu = ({ className }) => {
   //
   return (
     <div
-      className={`bg-strap px-[3.5rem] py-[6rem] w-[20rem] rounded-xl [box-shadow:-22px_29px_58px_12px_rgba(0,0,0,0.66)] ${className}`}
+      className={`bg-strap px-[3rem] py-[4rem] lg:px-[3.5rem] lg:py-[6rem] w-[20rem] rounded-xl [box-shadow:-22px_29px_58px_12px_rgba(0,0,0,0.66)] ${className}`}
     >
-      <div className="flex flex-col gap-[5rem] font-popping text-[24px] text-white ">
+      <div className="flex flex-col gap-[3rem] lg:gap-[5rem] font-popping text-[24px] text-white ">
         <a
           href="/"
           className={`uppercase before:absolute before:block before:top-8 relative before:h-2 before:w-2 before:rounded-full hover:before:bg-second border-b ${currentPath === "" ? "border-b-second before:bg-second" : "before:bg-white"}`}
